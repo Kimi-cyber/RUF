@@ -17,7 +17,7 @@ However, a potential issue arises with this formulation, particularly for new we
 
 The RUF process is outlined in the diagram, using an example of an LSTM network. During prediction, the process begins by using an initializer to predict the first value of the production data, denoted as U1. Subsequently, the sequence is padded with zeros for the remaining time steps. The padded sequence is then input into the network model, and the first predicted value, Y1', replaces the zero at U2. This process is repeated until all predicted values are generated. Additionally, if certain production history is known, it can be incorporated into the process, allowing for the prediction to start from the middle of the process.
 
-![image](https://github.com/ziming-zx/RUF/assets/55851734/8b684f3d-3009-4f5b-9680-f32279109268)
+![image](https://github.com/ziming-zx/RUF/assets/55851734/11781fa0-8c84-4551-bc79-149b03271e15)
 
 
 The underlying theorem supporting this approach is that, for a single-directional RNN, the current output is only dependent on the current and previous inputs and the previous hidden states. Future values do not influence the current output. As a result, we can pad the future values with zeros, and no masking is required during both training and prediction. It's essential to note that the RUF method is not suitable for bi-directional RNNs and encoder-decoders, as their structures consider the entire sequence and thus impact the current prediction.
