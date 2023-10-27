@@ -2,8 +2,9 @@
 
 ## Background
 
-Forecasting production for a new well, especially without any production history, is a crucial yet challenging task. Many existing methods rely on static properties for predictions, which may not be entirely accurate. As production data accumulates, we have the opportunity to refine our predictions and increase confidence levels. We propose a method known as Recursively Updated Forecasting (RUF) that leverages a continuous production data stream to enhance prediction accuracy.
-![image](https://github.com/ziming-zx/RUF/assets/55851734/b7239d6f-d1b9-4362-a642-b5dc70c3ff50)
+Forecasting production for a new well, especially without any production history, is a crucial yet challenging task. Many existing methods rely on static properties for predictions, which may be inaccurate. As production data accumulates, we can refine our predictions and increase confidence levels. We propose a method called Recursively Updated Forecasting (RUF) that leverages a continuous production data stream to enhance prediction accuracy.
+
+![image](https://github.com/ziming-zx/RUF/assets/55851734/613936ae-0515-483c-b5ce-c3a6bde7453f)
 
 
 ## Methodology
