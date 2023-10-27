@@ -1,4 +1,4 @@
-# RUF: Updating Time Series Predictions with Production Stream Data
+# RUF: Updating Time-Series Predictions with Stream Data
 
 ## Background
 
