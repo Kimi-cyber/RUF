@@ -1,5 +1,9 @@
 # RUF: Updating Time-Series Predictions with Stream Data
 
+## Citation
+
+If you use this code in your research, please cite the following paper: [Xu, Z., & Leung, J. Y. (2023). A novel formulation of RNN-based neural network with real-time updating–An application for dynamic hydraulic fractured shale gas production forecasting. Geoenergy Science and Engineering, 212491.](https://doi.org/10.1016/j.geoen.2023.212491)
+
 ## Background
 
 Forecasting production for a new well, especially without any production history, is a crucial yet challenging task. Many existing methods rely on static properties for predictions, which may be inaccurate. As production data accumulates, we can refine our predictions and increase confidence levels. We propose a method called Recursively Updated Forecasting (RUF) that leverages a continuous production data stream to enhance prediction accuracy.
