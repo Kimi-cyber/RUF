@@ -45,7 +45,7 @@ We then apply the model to predict Central Montney Shale. For prediction, we ext
 
 ## Results
 
-### Dataset 1
+### Dataset 1 (Code is provided)
 
 The prediction results of the initializer are displayed in the figure. The initializer exhibits accurate predictions for the peak gas and peak water rates. Following this, we integrate the first value into the RUF, enabling us to generate the entire production profile. The blue cross in the figure denotes the initializer's prediction. We train five models, and their predictions are depicted with different colors. As more data becomes available, we observe the model successfully updating and incorporating the ongoing production data. The prediction results from all five models closely align, showing a high degree of consistency. Additionally, the model can capture the sudden rate change caused by shut-ins.
 
