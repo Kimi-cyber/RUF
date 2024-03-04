@@ -13,13 +13,13 @@ Forecasting production for a new well, especially without any production history
 
 ## Methodology
 
-Given that the predicted time steps are not excessively long, our hypothesis involves incorporating the entire time series during training, eliminating the need for data segmentation. This leads to more efficient and stable training processes. The delay dimension or sliding window required for the model becomes the total sequence length -1, with a delay time of 1. The input and output structure, which includes static features, operational data, and production data, is illustrated in the table.
+Given that the predicted time steps are not excessively long, our hypothesis involves incorporating the entire time series during training, eliminating the need for data segmentation. This leads to more efficient and stable training processes. The `delay dimension` or `sliding window` required for the model becomes the `total sequence length -1`, with a `delay time` of `1`. The input and output structure, which includes static features, operational data, and production data, is illustrated in the table.
 
 However, a potential issue arises with this formulation, particularly for new wells where production data is unknown in the input. This may challenge the model's predictions. To address this limitation, we propose a novel prediction framework that supports this architecture, called "recursively updated forecasting."
 
 ![image](https://github.com/ziming-zx/RUF/assets/55851734/7481cb41-f9db-4412-893c-04193bbe346d)
 
-The RUF process is outlined in the diagram, using an example of an LSTM network. During prediction, the process begins by using an initializer to predict the first value of the production data, denoted as U1. Subsequently, the sequence is padded with zeros for the remaining time steps. The padded sequence is then input into the network model, and the first predicted value, Y1', replaces the zero at U2. This process is repeated until all predicted values are generated. Additionally, if certain production history is known, it can be incorporated into the process, allowing for the prediction to start from the middle of the process.
+The RUF process is outlined in the diagram, using an example of an LSTM network. During prediction, the process begins by using an initializer to predict the first value of the production data, denoted as `U1`. Subsequently, the sequence is padded with zeros for the remaining time steps. The padded sequence is then input into the network model, and the first predicted value, `Y1'`, replaces the zero at `U2`. This process is repeated until all predicted values are generated. Additionally, if certain production history is known, it can be incorporated into the process, allowing for the prediction to start from the middle of the process.
 
 ![image](https://github.com/ziming-zx/RUF/assets/55851734/11781fa0-8c84-4551-bc79-149b03271e15)
 
